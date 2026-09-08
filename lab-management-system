@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+int main() {
+    char labName[50];
+    int numComputers;
+    int numNetworkDevices;
+    int numSecurityTools;
+    float costPerComputer;
+    float costPerNetworkDevice;
+    float annualSoftwareCost;
+
+    float computerCost;
+    float networkCost;
+    float totalLabInvestment;
+
+    printf("Enter Lab Name: ");
+    scanf("%s", labName);
+
+    printf("Enter Number of Computers: ");
+    scanf("%d", &numComputers);
+
+    printf("Enter Number of Network Devices: ");
+    scanf("%d", &numNetworkDevices);
+
+    printf("Enter Number of Security Tools: ");
+    scanf("%d", &numSecurityTools);
+
+    printf("Enter Cost per Computer: ");
+    scanf("%f", &costPerComputer);
+
+    printf("Enter Cost per Network Device: ");
+    scanf("%f", &costPerNetworkDevice);
+
+    printf("Enter Annual Security Software Cost: ");
+    scanf("%f", &annualSoftwareCost);
+
+    computerCost = numComputers * costPerComputer;
+    networkCost = numNetworkDevices * costPerNetworkDevice;
+    totalLabInvestment = computerCost + networkCost + annualSoftwareCost;
+
+    printf("\n========================================\n");
+    printf("        CYBERSECURITY LAB REPORT        \n");
+    printf("========================================\n");
+    printf("Lab Name             : %s\n\n", labName);
+    printf("Computers            : %d\n", numComputers);
+    printf("Network Devices      : %d\n", numNetworkDevices);
+    printf("Security Tools       : %d\n\n", numSecurityTools);
+    printf("Computer Cost        : %.0f\n", computerCost);
+    printf("Network Device Cost  : %.0f\n", networkCost);
+    printf("Software Cost        : %.0f\n\n", annualSoftwareCost);
+    printf("----------------------------------------\n");
+    printf("Total Lab Investment : %.0f\n", totalLabInvestment);
+    printf("----------------------------------------\n");
+
+    return 0;
+}
